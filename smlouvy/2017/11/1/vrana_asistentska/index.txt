@@ -1,0 +1,40 @@
+---
+"layout":           contract
+"datum podpisu":    2017-11-10
+"datum úèinnosti":  2017-11-10
+"datum ukonèení":   
+title:              
+"použité smluvní typy":
+ 
+"pøedmìt":          
+"stav":             
+"smluvní strany":
+ -   
+  "jméno":    
+  "orgán":    
+  "zástupce": 
+  "funkce":   
+  "role":     
+  "znaèka":  
+ -   
+  "název":    
+  "sídlo":    
+  "role":     
+ "znaèka":    
+-   
+  "název":   
+  "IÈ":      
+  "sídlo":   
+  "zástupce": 
+  "role":    
+ "znaèka":   
+
+"náklady":  
+
+"místo uložení": Archiv, Poslanecký Klub Pirátù, Snìmovní 4, 118 26, Praha 3
+
+"soubory":
+ - 
+  "název": Rezervace DACHI
+  "podepsaná verze": "rezervace_DACHI.pdf"
+---
