@@ -1,0 +1,156 @@
+{
+    "title": "Nahrání smlouvy",
+    "description": "Vložení nové smlouvy do registru smluv.",
+    "type": "object",
+    "properties": {
+        "shortheading": {
+            "title": "Zkrácený název smlouvy",
+            "description": "",
+            "type": "string",
+            "required": true,
+            "default": "",
+            "pattern": "^[a-z\\-_0-9A-Z ]{5,30}$"
+        },
+        "heading": {
+            "title": "Název smlouvy",
+            "description": "",
+            "type": "string",
+            "required": true,
+            "default": ""
+        },
+        "subject": {
+            "title": "Předmět smlouvy",
+            "description": "Předmět smlouvy",
+            "type": "string",
+            "required": true,
+            "default": ""
+        },
+        "status": {
+            "title": "Stav",
+            "type": "string",
+            "enum": [
+                "splněna",
+            "odstoupeno",
+            "v plnění"
+            ],
+            "required": true,
+            "default": "v plnění"
+        },
+        "costs": {
+            "title": "Náklady",
+            "type": "number",
+            "description": "Odhadovaná výše nákladů",
+            "minimum": 0,
+            "required": true,
+            "default": 0
+        },
+        "sign": {
+            "title": "Datum podpisu (dd.mm.RRRR)",
+            "type": "string",
+            "format": "date",
+            "pattern": "^[0123]?[0-9].[0123]?[0-9].[0-9]{4}$"
+        },
+        "effective": {
+            "title": "Datum účinnosti (dd.mm.RRRR)",
+            "type": "string",
+            "format": "date",
+            "pattern": "^[0123]?[0-9].[0123]?[0-9].[0-9]{4}$"
+        },
+        "contract_end": {
+            "title": "Datum ukončení (dd.mm.RRRR)",
+            "type": "string",
+            "format": "date",
+            "pattern": "^[0123]?[0-9].[0123]?[0-9].[0-9]{4}$"
+        },
+        "contract_type": {
+            "title": "Použité smluvní typy",
+            "type": "string"
+        },
+        "tender": {
+            "title": "Odkaz na výběrové řízení",
+            "type": "string",
+            "format": "uri"
+        },
+        "location": {
+            "title": "Místo uložení",
+            "type": "string"
+        },
+        "token": {
+            "title": "Github access token",
+            "description": "Token vám musí vygenerovat správce repozitáře.",
+            "type": "string",
+            "required": true,
+            "minLength": 40,
+            "maxLength": 42
+        },
+        "docs": {
+            "title": "Podepsaná verze (naskenované PDF)",
+            "type": "docs"
+        },
+        "docs2": {
+            "title": "Strojově čitelná verze (PDF z editovatelného dokumentu)",
+            "type": "docs2"
+        },
+        "docs3": {
+            "title": "Upravitelná verze (Word dokument)",
+            "type": "docs3"
+        },
+        "docs4": {
+            "title": "Náhled (miniatura .JPG)",
+            "type": "docs4"
+        },
+        "parties": {
+            "title": "Smluvní strany",
+            "type": "array",
+            "items": {
+                "title": "smluvní strana",
+                "type": "object",
+                "minItems": 0,
+                "maxItems": 5,
+                "properties": {
+                    "name": {
+                        "title": "Jméno",
+                        "type": "string",
+                        "required": true
+                    },
+                    "sidlo": {
+                        "title": "Sídlo",
+                        "type": "string"
+                    },
+                    "bydliste": {
+                        "title": "Bydliště",
+                        "type": "string"
+                    },
+                    "ico": {
+                        "title": "IČ",
+                        "type": "string"
+                    },
+                    "narozen": {
+                        "title": "Narozen",
+                        "type": "string"
+                    },
+                    "organization": {
+                        "title": "Organizace",
+                        "type": "string"
+                    },
+                    "agent": {
+                        "title": "Zástupce smluvní strany",
+                        "type": "string"
+                    },
+                    "func": {
+                        "title": "Funkce",
+                        "type": "string"
+                    },
+                    "role": {
+                        "title": "Role",
+                        "type": "string"
+                    },
+                    "sign": {
+                        "title": "Značka",
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}
